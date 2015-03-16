@@ -51,5 +51,14 @@ module Nesta
         "/#{name.downcase.gsub(/\W+/, '-')}"
       end
     end
+
+    get "/" do
+      set_common_variables
+      @page = Nesta::Page.find_by_path("/")
+      raise Sinatra::NotFound if @page.nil?
+      @title = Nesta::Config.title
+      haml(:index)
+    end
+
   end
 end
