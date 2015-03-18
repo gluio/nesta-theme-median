@@ -242,6 +242,8 @@ ul.menu {
 }
 
 blockquote {
+  position: relative;
+
   &:before {
     display: block;
     content: "\201C";
