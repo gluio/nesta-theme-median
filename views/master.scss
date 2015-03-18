@@ -240,3 +240,17 @@ footer.branding {
 ul.menu {
   list-style: none;
 }
+
+blockquote {
+  em:last-of-type {
+    display: block;
+    float: right;
+    margin: 1em 0;
+
+    &:after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+}
