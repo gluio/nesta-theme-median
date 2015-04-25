@@ -12,6 +12,11 @@ body {
   letter-spacing: 0.16px;
   padding: 0;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
 }
 
 a {
@@ -37,13 +42,13 @@ h1, h2, h3, h4 {
 h1, h2 {
   font-size: $base-font-size * 1.64;
   line-height: $base-font-size * 1.64 * 1.15;
-  letter-spacing: (-1 * (23/32))px;
+  letter-spacing: (-1*(23/32))px;
 }
 
 h3, h4 {
   font-size: $base-font-size * 1.46;
   line-height: $base-font-size * 1.46 * 1.18;
-  letter-spacing: (-1 * (22/32))px;
+  letter-spacing: (-1*(22/32))px;
 }
 
 p, ul li, ol li {
@@ -88,6 +93,31 @@ section.header {
     text-align: center;
     font-size: 25px;
     line-height: 65px;
+  }
+}
+
+mark, blockquote {
+  background: transparent;
+  transition: background 0.5s;
+  &:hover {
+    background: #d3f7d2;
+  }
+}
+.twitter-share-button {
+  margin: 0 10px;
+  background-color: transparent;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAUCAYAAADPym6aAAAFf0lEQVRIiaWWz29V1RbHP2vvc3+0VBMSwISopdTbUq4/eKV9PNKBaSCoExi8cBGqCB3oyISBfwCJcWA0mhgHTJQX+5R6Mf4ATGTggKTB9/KAF0lK27SFlkBinr8ClIZ7z9lrvcGloYXe2x+s0cna65zP97v3XvtsYZlRLJpvzo8/byL7gCdFOGJpfuxobr4xUzMwPPxIV2vrlIjYchi7i+YbmHxeHftQfVIkdeS2lX88XrjH6P1k+JFPe1unBODcyMgq1XT+r21NZxYD+PfwRJPXcATYcd/QJTN7y0x+8469JlzraGv+AGDvFyOrIly+b19uUYxXixNNTuyIiNshzmOmiDgsJJc0JG8Fwm9RVLfXkvjaZy83f+AAJPhtzvTEfwYv71wIcPHi5Eqv4at5TABsFJGTznHWoCvAqXMjI6sAUlF6W1S/4sRrxYUZ+z6/uNJZ+Mqnszs0JIS4hCYxIS6BcxsRdzKKsmdNky7g1N4vRlY5AEQ2AI+KWP/5S+OHikXz1SDlVHIQaK+hwwOJwE1v9nYEGQBMN3gfPYrz/QeOXzm0u1isyoj8ioNRtr49uTP9wJgmMSLi0ZCI8zcRezsV1WdchSFTd+vqDD5sfvryyQtDo1vnpRgv1DAxE1mDxyTo4U2trdcBxMmUhgRU68RHH9ZL58n9xYn5GU5e0BCqftxMwfmsGI+ZRYc/KzxxPQJw3s6oEqjMJgYvmblt5wfHflAn/ZbYQOfTzddFRIH6RRiZlhD2bH6mZWgmoWJnKJeCYT7EZXwq85Im8bbXild+wLTfZbIDjbvWXj8sopjVm1U/H0QETKdDiPf0vVxhyMzguaHLH2H2ZpV3/zQYd8akwRaExxcwcjOJNf+353LXZif394995NOZN0NcnlGEj9KAEZL4T2DczCZF2CLiHzedf1VEHKbhZkgs//krFUYEcH5wvAflFxMbAmmb592VAh0mdCxgYCZuZTSamp14pX+8x6VSv4Q4HhLn20wDmFUauCJupXjfIc53aFKmmomZCUC4lYrvMSo9IlJnYu+AtCxSaO0wJjZtWndjdsp5qUtl698Ba5lPpJlWTqbyHUy15ufFeUAmjh64x3AALhW+Aya52yMPGyZy9v6foLfwXen2jUkXpR+a4bwHszkMB9Cey/0q4t4A/nhYCKBiduL+5NFC7lczfQPTP3w6y6z2XHKEuKw4mcNwMw+b25pOY+y6K6K0bIrx063/Xf3XfEN9e3KntZzs0iQ5IU5KyNLN+FQa0/DT+tXr5zDcnCqxbhNpY/nTZeLk3e7u7qS6Eut23reZqrCMG5iZmUPePdwtcxhzjIhxDMgC6aUjQODL9g1Np2rVqHBMkzgbZeqXzIgydYS4/OU/Cg8y5hjZnH9qzJm+iNlpoLxEzmAc5NBCN91/Fp4aS0he1KR8WpxbNMOnMoS4NJipc4eYh1F1C10YGt2q6t5D6FoEZ9yZ7mzP5y4tVhjA/uLEVoH3xEmXhhq7MZ1FQzzuVHYeLTTOy4jMTGbP4s8/j62J07LdzF5H2LIIPQMeev+Sz43WqBG41xGvfj22RpJoO9jriGypZkKcu7sS8YCUQ+/RnuaqDLkwOrraYtdjRifQCOQQ1iysX343s4/rufN+Pp+fqlV5sDi62iTqQaRTQ2hEJOej1Boz0OS+3SWC8xHOR4Sk/LuYfXzbpt8/XqjNEIALw8NrVVO7BQoGzwINVepLwJAI36oPfZ0tLZcXNlyJ3mNX1yY+7EYogDzrnGtwPqJyyzWcjzANaBKXEBkS57510Pfp3xsXxXigR/47dGVdYroRkfVibDesAfge4aqpDq+gPJrP55d6EMyJA99cWUeQjQrrUd0uWAPmvsfLVYiHp7U8erywNMb/AWjzhn4ByoGeAAAAAElFTkSuQmCC);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  text-indent: -999em;
+
+  width: 25px;
+  height: 20px;
+  line-height: 20px;
+  &:hover {
+    background-position: -25px 0px;
   }
 }
 
@@ -187,7 +217,8 @@ figure.intro {
   }
   img {
     width: 100%;
-    min-height: 90vh;
+    min-height: 85vh;
+    max-height: 85vh;
     object-fit: cover;
     overflow: hidden;
   }
@@ -213,6 +244,11 @@ footer.branding {
   }
   span.date::after {
     content: '·';
+  }
+  .addthis_sharing_toolbox {
+    float: right;
+    margin-right: 15px;
+    margin-top: 2px;
   }
   span.categories {
     float: right;
@@ -272,7 +308,10 @@ ul.menu {
 
 blockquote {
   position: relative;
-  color: lighten($base-color, 15%);
+  font-weight: 400;
+  font-style: italic;
+  font-family: $body-font-family;
+  margin: 1.5em 0 1em;
 
   &::before {
     display: block;
@@ -280,12 +319,18 @@ blockquote {
     font-size: 300%;
     position: absolute;
     font-family: Georgia, serif;
-    left: -40px;
-    top: -20px;
-    color: lighten($base-color, 15%);
+    left: -30px;
+    top: -15px;
   }
 
-  p, em:last-of-type {
+  p {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-style: italic;
+    font-family: $body-font-family;
+  }
+
+  em:last-of-type {
     display: block;
     float: right;
     margin: 1em 0;
@@ -297,3 +342,4 @@ blockquote {
     }
   }
 }
+

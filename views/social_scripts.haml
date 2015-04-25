@@ -1,0 +1,42 @@
+- if ENV["ADDTHIS_PUB_ID"]
+  %script(type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=#{ENV["ADDTHIS_PUB_ID"]}" async="async")
+- if ENV["SNIPLY_PROFILE_ID"]
+  :javascript
+    var sniply_profile_id='#{ENV["SNIPLY_PROFILE_ID"]}'; var s, r, t; r=false; s=document.createElement('script'); s.type='text/javascript'; s.src='https://ffb2efd5105ff0aedbc9-9cdacdeebf0faa19b665bf427f0c8092.ssl.cf1.rackcdn.com/js-snippet/snip_external_links_library.js'; s.onload=s.onreadystatechange=function () { if (!r && (!this.readyState || this.readyState == 'complete')) { r=true; }}; t=document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
+- if ENV["SUMOME_SITE_ID"]
+  %script(src="//load.sumome.com/" data-sumo-site-id="#{ENV["SUMOME_SITE_ID"]}" async="async")
+- twitter_handle = ENV["TWITTER_HANDLE"] || "getglu"
+:javascript
+  // Twitter tweet widget
+  var tweetClick = function(ev) {
+    ev.stopPropagation();
+    ev.preventDefault();
+    var el = $(ev.currentTarget);
+    var url = el.attr('href');
+    console.log(ev);
+    window.open(url, 'twitterwindow', 'height=450, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+  }
+  $(document).ready(function() {
+    var tweetButton = $('<a href="https://twitter.com/share" class="twitter-share-button" target="_blank" data-via="#{twitter_handle}" data-related="getglu" data-count="none">Tweet</a>');
+    $('mark, blockquote p').each(function() {
+      var el = $(this);
+      var tweetText = el.text().trim().replace(/ +|\r?\n|\r/g, " ");
+      var thisTweetButton = tweetButton.clone();
+      thisTweetButton.attr('data-text', tweetText);
+      var queryString = $.param(thisTweetButton.data());
+      var url = thisTweetButton.attr('href') + '?' + queryString;
+      thisTweetButton.attr('href', url);
+      thisTweetButton.click(tweetClick);
+      el.append(thisTweetButton);
+    });
+  });
+- if ENV["FACEBOOK_APP_ID"]
+  #fb-root
+  :javascript
+    (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=#{ENV["FACEBOOK_APP_ID"]}";
+     fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));

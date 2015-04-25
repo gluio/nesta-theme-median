@@ -17,4 +17,6 @@
     %section.articles
       %h2= "Articles on #{@page.heading}"
       = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
+  - if ENV["FACEBOOK_APP_ID"]
+    .fb-comments(data-width="100%" data-numposts="5" data-colorscheme="light")
 = haml :footer, layout: false
