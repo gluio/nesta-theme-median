@@ -3,7 +3,7 @@
   %head
     %meta(charset="utf-8")
     %title= @title
-    %link(rel="stylesheet" type="text/css" href="/css/master.css")
+    %link(rel="stylesheet" type="text/css" href="#{path_to("css/master.css")}")
     = haml :analytics, layout: false
     = haml :fonts, layout: false
   %body
