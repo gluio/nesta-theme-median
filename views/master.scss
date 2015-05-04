@@ -153,6 +153,10 @@ mark, blockquote {
     text-align: center;
   }
 
+  h1, h2, h3, h4, p {
+      clear: both;
+  }
+
   ul, ol {
     margin: 1em 0;
   }
@@ -173,14 +177,12 @@ mark, blockquote {
     h1, h2, h3, h4 {
       text-align: left;
       margin: 0.2em 0;
-      clear: both;
     }
     p {
       margin-top: 0.2em;
       margin-bottom: 0;
       font-size: 67%;
       line-height: 1.7em;
-      clear: both;
     }
     footer {
       margin: 0 0 3em;
