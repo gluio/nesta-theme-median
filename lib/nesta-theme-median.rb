@@ -1,3 +1,4 @@
+require "nesta/overrides"
 require "nesta-theme-median/version"
 
 module Nesta
