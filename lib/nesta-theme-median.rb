@@ -1,4 +1,4 @@
-require "./version"
+require "nesta-theme-median/version"
 
 module Nesta
   module Theme
