@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Glenn Gillen"]
   spec.email         = ["me@glenngillen.com"]
   spec.summary       = %q{A typography focussed theme for NestaCMS.}
-  spec.homepage      = "https://nestadrop.io"
+  spec.homepage      = "https://contentfocus.io"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
