@@ -1,4 +1,4 @@
-require "nesta/overrides"
+require "nesta/path"
 require "nesta-theme-median/version"
 
 module Nesta
