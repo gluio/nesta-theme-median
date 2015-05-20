@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
 
   spec.add_runtime_dependency "nesta"
+  spec.add_runtime_dependency "redcarpet"
 end
