@@ -1,4 +1,4 @@
-%footer.branding
+%footer.post-links
   - if @page
     - if @page.metadata('author')
       %span.author
@@ -9,10 +9,6 @@
         on
         = format_date(@page.date)
       %span.eta= reading_time(@page.body_markup)
-  .contentfocus
-    %a(href="https://contentfocus.io/?utm_source=#{site_domain}&utm_medium=footer")
-      %span.powered-by Powered by
-      %span.contentfocus ContentFocus.io
   - if ENV["ADDTHIS_PUB_ID"]
     .addthis_sharing_toolbox
   - unless @page.nil? || @page.categories.empty?
