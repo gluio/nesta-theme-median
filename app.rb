@@ -1,3 +1,18 @@
+require 'redcarpet'
+class HTMLWithTocRender < Redcarpet::Render::HTML
+  def preprocess(document)
+    @document = document
+  end
+
+  def paragraph(content)
+    if ['[TOC]', '{:toc}'].include?(content)
+      toc_render = Redcarpet::Render::HTML_TOC.new(nesting_level: 2)
+      parser     = Redcarpet::Markdown.new(toc_render)
+      return parser.render(@document)
+    end
+  end
+end
+
 module Nesta
   class Page < FileModel
     def convert_to_html(format, scope, text)
@@ -7,7 +22,7 @@ module Nesta
         with_toc_data: true
       }
       markdown_options = {
-        renderer: Redcarpet::Render::HTML.new(render_options),
+        renderer: HTMLWithTocRender.new(render_options),
         autolink: true,
         disable_indented_code_blocks: true,
         fenced_code_blocks: true,
