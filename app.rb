@@ -12,6 +12,8 @@ class HTMLWithTocRender < Redcarpet::Render::HTML
       rendered = parser.render(@document)
       STDOUT.puts("Content output: #{rendered}")
       return rendered
+    else
+      super(content)
     end
   end
 end
