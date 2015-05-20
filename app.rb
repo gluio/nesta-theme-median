@@ -13,7 +13,7 @@ class HTMLWithTocRender < Redcarpet::Render::HTML
       STDOUT.puts("Content output: #{rendered}")
       return rendered
     else
-      super(content)
+      content
     end
   end
 end
