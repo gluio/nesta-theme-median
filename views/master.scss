@@ -370,17 +370,19 @@ blockquote {
   }
 }
 
-ul.toc {
-  list-style: none;
-  padding-left: 0;
-  font-size: 90%;
+#content {
+  ul.toc {
+    list-style: none;
+    padding-left: 0;
+    font-size: 90%;
 
-  li {
-    margin: 0;
-  }
+    li {
+      margin: 0;
+    }
 
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
