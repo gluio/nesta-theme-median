@@ -5,10 +5,13 @@ class HTMLWithTocRender < Redcarpet::Render::HTML
   end
 
   def paragraph(content)
+    STDOUT.puts("Content check: #{content}")
     if ['[TOC]', '{:toc}'].include?(content)
       toc_render = Redcarpet::Render::HTML_TOC.new(nesting_level: 2)
       parser     = Redcarpet::Markdown.new(toc_render)
-      return parser.render(@document)
+      rendered = parser.render(@document)
+      STDOUT.puts("Content output: #{rendered}")
+      return rendered
     end
   end
 end
