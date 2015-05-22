@@ -5,7 +5,8 @@
         %article
           %header
             - if page.intro_image
-              %img.intro(src="#{page.intro_image}")
+              %a(href="#{path_to(page.abspath)}")
+                %img.intro(src="#{page.intro_image}")
             %h1
               %a(href="#{path_to(page.abspath)}")= page.link_text
           %p
