@@ -1,19 +1,20 @@
-%footer.post-links
-  - if @page
-    - if @page.metadata('author')
-      %span.author
-        %a(href="#{author_url(@page.metadata('author'))}")
-          = @page.metadata('author')
-    - if @page.date
-      %span.date
-        on
-        = format_date(@page.date)
-      %span.eta= reading_time(@page.body_markup)
-  - if ENV["ADDTHIS_PUB_ID"]
-    .addthis_sharing_toolbox
-  - unless @page.nil? || @page.categories.empty?
-    %span.categories
-      %span.read-more Read more in&nbsp;
-      - @page.categories.each do |category|
-        %span.category>
-          %a{ :href => category.abspath }>= category.heading
+- if (@page && (@page.metadata('author') || @page.date || !@page.categories.empty?)) || ENV["ADDTHIS_PUB_ID"]
+  %footer.post-links
+    - if @page
+      - if @page.metadata('author')
+        %span.author
+          %a(href="#{author_url(@page.metadata('author'))}")
+            = @page.metadata('author')
+      - if @page.date
+        %span.date
+          on
+          = format_date(@page.date)
+        %span.eta= reading_time(@page.body_markup)
+    - if ENV["ADDTHIS_PUB_ID"]
+      .addthis_sharing_toolbox
+    - unless @page.nil? || @page.categories.empty?
+      %span.categories
+        %span.read-more Read more in&nbsp;
+        - @page.categories.each do |category|
+          %span.category>
+            %a{ :href => category.abspath }>= category.heading
