@@ -196,7 +196,7 @@ mark, blockquote {
       .more, .eta {
         display: inline;
       }
-      .more::after {
+      .more::after, .categories::after {
         content: '·';
       }
       div.author {

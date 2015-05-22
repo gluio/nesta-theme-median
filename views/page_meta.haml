@@ -1,10 +1,10 @@
 - if page.date
   %footer
     .meta
-      .more
+      %span.more
         %a(href="#{path_to(page.abspath)}")= page.read_more
       - if (! page.categories.empty?)
-        .categories
+        %span.categories
           In
           - page.categories.each do |category|
             - if category != page.categories[-1]
@@ -12,15 +12,16 @@
                 %a(href="#{path_to(category.abspath)}")= category.link_text
             - else
               %a(href="#{path_to(category.abspath)}")= category.link_text
-      .eta
+      %span.eta
         = reading_time(page.body_markup)
         read
       - if page.metadata('author')
-        .author
+        %span.author
+          by
           %a(href="#{author_url(page.metadata('author'))}")
             = page.metadata('author')
       - if page.date
-        .date
+        %span.date
           on
           %time(datetime="#{page.date.to_s}" pubdate=true)= format_date(page.date)
 
