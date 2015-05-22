@@ -192,9 +192,9 @@ mark, blockquote {
       .meta {
         margin-top: 1em;
       }
-
-      .more, .eta {
-        display: inline;
+      .more {
+        display: block;
+        float: left;
       }
       .more::after, .categories::after {
         content: '·';
@@ -206,7 +206,9 @@ mark, blockquote {
         font-size: 100%;
         margin-top: 0;
       }
-
+      .date {
+        float: left
+      }
     }
   }
   div.author {
