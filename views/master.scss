@@ -54,13 +54,13 @@ h1, h2, h3, h4 {
 h1, h2 {
   font-size: $base-font-size * 1.64;
   line-height: $base-font-size * 1.64 * 1.15;
-  letter-spacing: (-1*(23/32))px;
+  letter-spacing: (-1px*(23/32));
 }
 
 h3, h4 {
   font-size: $base-font-size * 1.46;
   line-height: $base-font-size * 1.46 * 1.18;
-  letter-spacing: (-1*(22/32))px;
+  letter-spacing: (-1px*(22/32));
 }
 
 p, ul li, ol li {
