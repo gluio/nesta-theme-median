@@ -1,3 +1,5 @@
+require 'tilt'
+require 'nesta/model'
 module Nesta
   class Page < FileModel
     alias_method :pre_median_to_html, :to_html
