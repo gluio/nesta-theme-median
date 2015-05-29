@@ -6,7 +6,7 @@ module Nesta
 
     def to_html(scope = Object.new, strip_heading = false)
       html = pre_median_to_html(scope)
-      html.sub!(/<h1>.*?<\/h1>/, "") if strip_heading
+      html.sub!(/<h1.*?>.*?<\/h1>/, "") if strip_heading
       html
     end
   end
