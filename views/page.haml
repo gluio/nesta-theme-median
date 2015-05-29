@@ -4,7 +4,7 @@
     %h1= @page.heading
     %img(src="#{@page.intro_image}")
 #content
-  ~ @page.to_html(self)
+  ~ @page.to_html(self, !!@page.intro_image)
   - if @page.metadata('author')
     .author
       = author_biography
