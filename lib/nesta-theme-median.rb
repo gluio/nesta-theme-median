@@ -1,3 +1,4 @@
+require 'nesta-contentfocus-extensions'
 require "nesta-theme-median/version"
 require "nesta-theme-median/page"
 

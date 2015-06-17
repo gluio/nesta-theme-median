@@ -1,6 +1,5 @@
 require 'tilt'
 require 'nesta/models'
-require 'nesta-contentfocus-extensions'
 module Nesta
   class Page < FileModel
     alias_method :pre_median_to_html, :to_html
