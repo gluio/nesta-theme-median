@@ -371,7 +371,7 @@ table {
   th, td {
     padding: 0.25em 0.5em;
   }
-  td:nth-child(even) {
+  tr:nth-child(even) {
     background-color: #efefef;
   }
 }
