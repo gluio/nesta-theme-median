@@ -363,3 +363,16 @@ blockquote {
     }
   }
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+  th, td {
+    padding: 0.25em 0.5em;
+  }
+  td:nth-child(even) {
+    background-color: #efefef;
+  }
+}
+
