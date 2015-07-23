@@ -1,8 +1,4 @@
-$base-font-size: 22px;
-$base-color: rgba(0, 0, 0, 0.8);
-$heading-font-family: jaf-bernino-sans, 'Open Sans' 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
-$body-font-family: freight-text-pro, Merriweather, Georgia, Cambria, 'Times New Roman', Times, serif;
-$link-color: rgb(77, 204, 75);
+@import "variables";
 
 // hidpi mixin courtesy of https://github.com/thoughtbot/bourbon/blob/cb6e72a72bb4925de1536c7f8adb5b7726d0cbd2/app/assets/stylesheets/css3/_hidpi-media-query.scss#L9
 // MIT Licensed
@@ -17,7 +13,7 @@ $link-color: rgb(77, 204, 75);
 }
 
 body {
-  font-family: $body-font-family;
+  font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: 300;
   color: $base-color;
@@ -311,7 +307,7 @@ blockquote {
   position: relative;
   font-weight: 400;
   font-style: italic;
-  font-family: $body-font-family;
+  font-family: $base-font-family;
   margin: 1.5em 0 1em;
 
   &::before {
@@ -328,7 +324,7 @@ blockquote {
     margin-bottom: 0;
     font-weight: 400;
     font-style: italic;
-    font-family: $body-font-family;
+    font-family: $base-font-family;
   }
 
   em:last-of-type {
