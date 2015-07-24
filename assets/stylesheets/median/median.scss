@@ -327,6 +327,26 @@ blockquote {
     font-family: $base-font-family;
   }
 
+  cite {
+    display: block;
+    font-size: 75%;
+    color: lighten($base-font-color, 25%);
+    img {
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 5px;
+      height: 2em;
+      width: 2em;
+      border: 1px solid #000;
+      padding: 2px;
+    }
+    a {
+      color: lighten($base-font-color, 25%);
+    }
+    &:before {
+      content: "\2014";
+    }
+  }
   em:last-of-type {
     display: block;
     float: right;
