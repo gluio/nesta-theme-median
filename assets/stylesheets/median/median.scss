@@ -16,7 +16,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-weight: 300;
-  color: $base-color;
+  color: $base-font-color;
   letter-spacing: 0.16px;
   padding: 0;
   margin: 0;
@@ -43,7 +43,7 @@ h1, h2, h3, h4 {
   margin: 1.66em 0 0.83em;
   a {
     text-decoration: none;
-    color: $base-color;
+    color: $base-font-color;
   }
 }
 
