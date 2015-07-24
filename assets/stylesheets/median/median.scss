@@ -436,6 +436,7 @@ $code-background: #fcfcfc;
     pre {
       padding: 1rem 0;
       & > span {
+        display: block;
         &.highlight {
           background: #f7f7c6;
         }
