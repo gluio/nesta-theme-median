@@ -424,6 +424,7 @@ $code-background: #fcfcfc;
         text-decoration: none;
         width: 100%;
         display: block;
+        padding: 0 0.5rem;
         &.highlight {
           background: #f7f7c6;
         }
@@ -431,13 +432,14 @@ $code-background: #fcfcfc;
     }
   }
   td.code {
-    padding: 0 0.5rem;
+    padding: 0;
     width: 100%;
     pre {
       padding: 1rem 0;
       & > span {
         &.line {
           display: block;
+          padding: 0 0.5rem;
         }
         &.highlight {
           background: #f7f7c6;
