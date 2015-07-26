@@ -425,6 +425,7 @@ $code-background: #fcfcfc;
         width: 100%;
         display: block;
         padding: 0 0.5rem;
+        box-sizing: border-box;
         &.highlight {
           background: #f7f7c6;
         }
@@ -440,6 +441,7 @@ $code-background: #fcfcfc;
         &.line {
           display: block;
           padding: 0 0.5rem;
+          box-sizing: border-box;
         }
         &.highlight {
           background: #f7f7c6;
