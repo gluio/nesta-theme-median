@@ -411,30 +411,8 @@ $code-background: #fcfcfc;
   overflow-x: auto;
   display: block;
 
-  td.gutter {
+  td {
     padding: 0;
-    border-right: 1px solid darken($code-background, 10%);
-    width: 50px;
-    display: inline-block;
-    pre {
-      padding: 1rem 0;
-      width: 100%;
-      a {
-        color: darken($code-background, 20%);
-        text-decoration: none;
-        width: 100%;
-        display: inline-block;
-        padding: 0 0.5rem;
-        box-sizing: border-box;
-      }
-      .highlight {
-        background: #f7f7c6;
-      }
-    }
-  }
-  td.code {
-    padding: 0;
-    width: 100%;
     pre {
       padding: 1rem 0;
       & > span {
@@ -449,6 +427,25 @@ $code-background: #fcfcfc;
         }
       }
     }
+  }
+  td.gutter {
+    border-right: 1px solid darken($code-background, 10%);
+    width: 50px;
+    display: inline-block;
+    pre {
+      width: 100%;
+      a {
+        color: darken($code-background, 20%);
+        text-decoration: none;
+        width: 100%;
+        display: inline-block;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+      }
+    }
+  }
+  td.code {
+    width: 100%;
   }
   .hll {
     border-radius: 0;
