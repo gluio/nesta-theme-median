@@ -426,9 +426,9 @@ $code-background: #fcfcfc;
         display: inline-block;
         padding: 0 0.5rem;
         box-sizing: border-box;
-        &.highlight {
-          background: #f7f7c6;
-        }
+      }
+      .highlight {
+        background: #f7f7c6;
       }
     }
   }
