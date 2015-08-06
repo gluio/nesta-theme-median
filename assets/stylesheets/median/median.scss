@@ -119,6 +119,8 @@ mark, blockquote {
   line-height: 33px;
   font-family: "fontello";
   font-style: normal;
+  margin-bottom: 5px;
+  text-align: center;
 
   &:hover {
     text-decoration: none;
@@ -353,6 +355,11 @@ blockquote {
   &:hover {
     &::before {
       color: #55acee;
+    }
+    .twitter-share-button {
+      text-decoration: none;
+      color: $base-background-color;
+      background: #55acee;
     }
   }
 
