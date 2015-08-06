@@ -1,3 +1,4 @@
+require 'neat'
 require 'nesta-theme-median/helpers'
 require 'nesta-theme-median/page'
 module Nesta
