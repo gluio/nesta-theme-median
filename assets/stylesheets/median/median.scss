@@ -185,6 +185,11 @@ mark, blockquote {
       .more {
         display: block;
         float: left;
+        text-overflow: ellipsis;
+        max-width: 18em;
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
       }
       .more::after, .categories::after {
         content: '·';
