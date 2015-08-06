@@ -1,9 +1,81 @@
-$base-font-size: 22px !default;
-$base-font-color: rgba(0, 0, 0, 0.8) !default;
+@import "neat-helpers";
+
+// Typography
 $heading-font-family: jaf-bernino-sans, 'Open Sans' 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif !default;
 $base-font-family: freight-text-pro, Merriweather, Georgia, Cambria, 'Times New Roman', Times, serif !default;
 $code-font-family: Consolas, 'Liberation Mono', Menlo, monaco, 'Inconsolata', 'Ubuntu Mono', Courier, monospace !default;
-$link-color: rgb(77, 204, 75) !default;
+$navigation-font-family: ff-meta-web-pro, $heading-font-family !default;
+
+// Font sizes
+$base-font-size: 22px !default;
+$heading-font-size: $base-font-size * 1.64 !default;
+$code-font-size: 16px !default;
+
+// Line height
 $base-line-height: $base-font-size * 1.5;
-$base-spacing: $base-line-height;
-$background-color: #fafafa !default;
+$heading-line-height: $heading-font-size * 1.15;
+$code-line-height: $code-font-size * 1.5;
+
+// Other typesetting hints
+$heading-letter-spacing: -2px*(23/32);
+
+// Other sizes
+$base-spacing: $base-line-height !default;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0 !default;
+$nav-header-height: 65px !default;
+
+// Background colors
+$base-background-color: #fafafa;
+$secondary-background-color: tint($base-background-color, 75%);
+
+// Colors
+$base-color: rgba(0, 0, 0, 0.8) !default;
+$success-color: #c1fca9 !default;
+$notice-color: #a7d4f9 !default;
+$error-color: #ffabb6 !default;
+$alert-color: #ffe7ab !default;
+$base-accent-color: #262626 !default;
+$action-color: #5cd02e !default;
+$base-button-color: $action-color !default;
+$hover-button-color: lighten($base-button-color, 10%);
+$code-background: darken($base-background-color, 3%) !default;
+
+// Font colors
+$base-font-color: rgba(0, 0, 0, 0.8) !default;
+$link-color: rgb(77, 204, 75) !default;
+
+// Borders
+$base-border-radius: 5px;
+$base-border-color: lighten($base-font-color, 75%);
+$base-border: 1px solid $base-border-color;
+
+// Containers
+$max-width: 100%;
+
+// Screens
+$medium-screen-width: 600px;
+$medium-screen: new-breakpoint(min-width $medium-screen-width 12);
+$large-screen-width: 900px;
+$large-screen: new-breakpoint(min-width $large-screen-width 12);
+$tablet-width: 768px;
+$tablet: new-breakpoint(max-width $tablet-width 12);
+$mobile-width: 480px;
+$mobile: new-breakpoint(max-width $mobile-width 4);
+
+// Forms
+$form-font-family: $base-font-family;
+$form-font-size: $base-font-size;
+$form-border-radius: $base-border-radius;
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($form-border-color, 10);
+$form-border-color-focus: adjust-color($action-color, $lightness: -5%);
+$form-box-shadow: inset 0 1px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Syntax Highlighting
+$syntax-name-function: #990000;

@@ -20,7 +20,7 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
-  transition: color 0.5s;
+  transition: color $base-duration;
 }
 a:hover {
   color: darken($link-color, 20%);
@@ -96,7 +96,7 @@ section.header {
 
 mark, blockquote {
   background: transparent;
-  transition: background 0.5s, border 0.5s, color 0.5s;
+  transition: background $base-duration $base-timing, border $base-duration $base-timing, color $base-duration $base-timing;
   border-left: 5px solid transparent;
   padding: 0 5px;
   &:hover {
@@ -237,9 +237,9 @@ mark, blockquote {
       left: $base-spacing * -1;
     }
     &:hover a[class^="icon-"] {
-      color: transparentize($base-color, 0.6);
+      color: transparentize($base-font-color, 0.6);
       &:hover {
-        color: $base-color;
+        color: $base-font-color;
       }
     }
   }
@@ -340,7 +340,7 @@ blockquote {
   margin: 1.5em 0 1em;
 
   &::before {
-    transition: color 0.5s;
+    transition: color $base-duration;
     display: block;
     content: "\201C";
     font-size: 300%;
