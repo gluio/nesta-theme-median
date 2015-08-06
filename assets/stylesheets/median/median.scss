@@ -170,6 +170,7 @@ mark, blockquote {
       line-height: 1.7em;
     }
     footer {
+      @include clearfix;
       margin: 0 0 3em;
       font-size: 60%;
       line-height: 1.6em;
