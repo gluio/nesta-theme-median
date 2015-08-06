@@ -7,6 +7,9 @@
   ~ @page.to_html(self, !!@page.intro_image)
   - if @page.metadata('author')
     .author
+      - if author_avatar
+        %img.avatar{src: author_avatar}
+      %h2= author_full_name
       = author_biography
   = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 

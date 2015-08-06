@@ -202,8 +202,23 @@ mark, blockquote {
   div.author {
     margin-top: 2em;
     color: rgba(120, 120, 120, 0.8);
-    font-size: 85%;
-    font-style: italic;
+    text-align: center;
+    img.avatar {
+      padding: 2px;
+      border: 1px solid rgba(120, 120, 120, 0.8);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: $base-spacing/4;
+      font-size: 85%;
+      font-style: italic;
+    }
   }
 }
 

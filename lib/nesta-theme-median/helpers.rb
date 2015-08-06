@@ -27,13 +27,31 @@ module Nesta
           summary.sub(/\.\z/,"&hellip;")
         end
 
-        def author_biography(name = nil)
+        def find_author_page(name)
           name ||= @page.metadata('author')
-          if name
-            template = name.downcase.gsub(/\W+/, '-')
-            page = Page.find_by_path("/#{template}")
-            page.body if page
+          return nil unless name
+          template = name.downcase.gsub(/\W+/, '-')
+          page = Page.find_by_path("/#{template}")
+        end
+
+        def author_avatar(name = nil)
+          page = find_author_page(name)
+          return unless page
+          email = page.metadata('author email')
+          if email
+            hash = Digest::MD5.hexdigest(email.downcase)
+            "//www.gravatar.com/avatar/#{hash}"
           end
+        end
+
+        def author_biography(name = nil)
+          page = find_author_page(name)
+          page.body if page
+        end
+
+        def author_full_name(name = nil)
+          page = find_author_page(name)
+          page.heading if page
         end
 
         def author_url(name)
