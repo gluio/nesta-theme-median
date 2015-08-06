@@ -4,6 +4,8 @@
       - if @page.metadata('author')
         %span.author
           %a(href="#{author_url(@page.metadata('author'))}")
+            - if author_avatar
+              %img.avatar{src: author_avatar}
             = @page.metadata('author')
       - if @page.date
         %span.date

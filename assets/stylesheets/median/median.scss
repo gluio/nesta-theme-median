@@ -289,8 +289,16 @@ footer.post-links {
   font-size: 15px;
   line-height: 22px;
 
-
   span.author {
+    img.avatar {
+      border: rgba(120, 120, 120, 0.8);
+      vertical-align: middle;
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      padding: 1px;
+      box-sizing: border-box;
+    }
     @media screen and (max-width: 580px) {
       display: none;
     }
