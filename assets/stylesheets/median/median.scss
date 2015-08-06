@@ -172,13 +172,11 @@ mark, blockquote {
     p {
       margin-top: 0.2em;
       margin-bottom: 0;
-      font-size: 67%;
       line-height: 1.7em;
     }
     footer {
       @include clearfix;
       margin: 0 0 3em;
-      font-size: 60%;
       line-height: 1.6em;
       color: rgba(120, 120, 120, 0.8);
       .meta {
