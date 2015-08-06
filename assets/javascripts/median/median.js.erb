@@ -24,3 +24,20 @@
   })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
   _st('install','<%=ENV['SWIFTYPE_KEY']%>','2.0.0');
 <% end %>
+<% if ENV['SUMOME_SITE_ID'] %>
+  jQuery(document).ready(function() {
+    jQuery('body').append('<script src="//load.sumome.com/" data-sumo-site-id="<%=ENV['SUMOME_SITE_ID']%>" async="async"></script>");
+  });
+<% end %>
+<% if ENV['FACEBOOK_APP_ID'] %>
+  jQuery(document).ready(function() {
+    jQuery('body').append('<div id="fb-root"></div>');
+    (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=<%=ENV['FACEBOOK_APP_ID']%>";
+     fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  });
+<% end %>
