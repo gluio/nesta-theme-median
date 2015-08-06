@@ -240,6 +240,7 @@ mark, blockquote {
       color: transparentize($base-font-color, 0.6);
       &:hover {
         color: $base-font-color;
+        text-decoration: none;
       }
     }
   }
