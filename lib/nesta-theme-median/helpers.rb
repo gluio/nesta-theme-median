@@ -32,7 +32,7 @@ module Nesta
           if name
             template = name.downcase.gsub(/\W+/, '-')
             page = Page.find_by_path("/#{template}")
-            page.body
+            page.body if page
           end
         end
 
