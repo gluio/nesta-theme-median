@@ -224,6 +224,25 @@ mark, blockquote {
       font-style: italic;
     }
   }
+  [class^="icon-"] {
+    color: inherit;
+  }
+
+  h1, h2, h3, section h1, section h2, section h3 {
+    position: relative;
+    a[class^="icon-"] {
+      font-size: $base-font-size;
+      position: absolute;
+      color: transparent;
+      left: $base-spacing * -1;
+    }
+    &:hover a[class^="icon-"] {
+      color: transparentize($base-color, 0.6);
+      &:hover {
+        color: $base-color;
+      }
+    }
+  }
 }
 
 figure.intro {
