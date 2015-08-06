@@ -117,6 +117,9 @@ mark, blockquote {
   color: #55acee;
   display: inline-block;
   line-height: 33px;
+  font-family: "fontello";
+  font-style: normal;
+
   &:hover {
     text-decoration: none;
     color: $base-background-color;
