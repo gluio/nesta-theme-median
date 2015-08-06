@@ -107,6 +107,7 @@ mark, blockquote {
 }
 .twitter-share-button {
   @extend .icon-twitter;
+  transition: background $base-duration $base-timing, color $base-duration $base-timing;
   border-radius: 50%;
   vertical-align: middle;
   height: 33px;
@@ -115,9 +116,11 @@ mark, blockquote {
   background-color: transparent;
   color: #55acee;
   display: inline-block;
-  text-indent: -999em;
   line-height: 33px;
   &:hover {
+    text-decoration: none;
+    color: $base-background-color;
+    background: #55acee;
   }
 }
 
