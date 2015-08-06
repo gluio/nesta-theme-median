@@ -193,6 +193,7 @@ mark, blockquote {
       }
       .more::after, .categories::after {
         content: '·';
+        margin-right: 3px;
       }
       .author {
         float: left;
