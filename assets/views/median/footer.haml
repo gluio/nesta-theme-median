@@ -19,4 +19,4 @@
         %span.read-more Read more in&nbsp;
         - @page.categories.each do |category|
           %span.category>
-            %a{ :href => category.abspath }>= category.heading
+            %a{ :href => category.abspath }>= category.heading_or_site_title
