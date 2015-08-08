@@ -402,6 +402,9 @@ blockquote {
     &:before {
       content: "\2014";
     }
+    em {
+      color: lighten($base-font-color, 35%);
+    }
   }
 }
 
