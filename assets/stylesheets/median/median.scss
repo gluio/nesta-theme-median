@@ -403,17 +403,6 @@ blockquote {
       content: "\2014";
     }
   }
-  em:last-of-type {
-    display: block;
-    float: right;
-    margin: 1em 0;
-
-    &::after {
-      display: block;
-      clear: both;
-      content: '';
-    }
-  }
 }
 
 #content {
