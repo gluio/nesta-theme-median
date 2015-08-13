@@ -7,6 +7,8 @@
     = haml :javascripts, layout: false
     = haml :fonts, layout: false
     = haml :default_head, layout: false
+    - if @page && @page.canonical_url
+      %link(rel="canonical" href=@page.canonical_url)
   %body
     .container
       = yield
