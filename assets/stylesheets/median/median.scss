@@ -209,10 +209,21 @@ mark, blockquote {
       }
     }
   }
+  p.republished, div.author p {
+    font-size: 85%;
+    color: rgba(120,120,120,0.8);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.2em;
+  }
+  div.republished {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: $base-spacing 0;
+    margin: $base-spacing 0;
+  }
   div.author {
     margin-top: 2em;
-    color: rgba(120, 120, 120, 0.8);
-    text-align: center;
     img.avatar {
       padding: 2px;
       border: 1px solid rgba(120, 120, 120, 0.8);
@@ -226,8 +237,6 @@ mark, blockquote {
     }
     p {
       margin-top: $base-spacing/4;
-      font-size: 85%;
-      font-style: italic;
     }
   }
   [class^="icon-"] {
