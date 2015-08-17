@@ -9,7 +9,7 @@
     - link_text = @page.metadata('Canonical Name') || @page.canonical_url
     .republished
       This post was originally featured over at
-        %a{ href: @page.canonical_url }= link_text
+      %a{ href: @page.canonical_url }= link_text
       and is being republished here.
 
   - if @page.metadata('author')
