@@ -106,6 +106,9 @@ mark, blockquote {
     cursor: pointer;
   }
 }
+mark {
+  color: darken(#55acee, 10%);
+}
 .twitter-share-button {
   @extend .icon-twitter;
   transition: background $base-duration $base-timing, color $base-duration $base-timing;
@@ -123,7 +126,7 @@ mark, blockquote {
   margin-bottom: 5px;
   text-align: center;
 
-  &:hover {
+  &:hover, mark:hover & {
     text-decoration: none;
     color: $base-background-color;
     background: #55acee;
