@@ -55,7 +55,7 @@ module Nesta
         end
 
         def author_url(name)
-          "/#{name.downcase.gsub(/\W+/, '-')}"
+          url("/#{name.downcase.gsub(/\W+/, '-')}")
         end
       end
     end

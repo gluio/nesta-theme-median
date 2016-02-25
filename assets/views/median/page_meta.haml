@@ -2,16 +2,16 @@
   %footer
     .meta
       %span.more
-        %a(href="#{path_to(page.abspath)}")= page.read_more
+        %a(href="#{url(page.abspath)}")= page.read_more
       - if (! page.categories.empty?)
         %span.categories
           In
           - page.categories.each do |category|
             - if category != page.categories[-1]
               = succeed ',' do
-                %a(href="#{path_to(category.abspath)}")= category.link_text
+                %a(href="#{url(category.abspath)}")= category.link_text
             - else
-              %a(href="#{path_to(category.abspath)}")= category.link_text
+              %a(href="#{url(category.abspath)}")= category.link_text
       %span.eta
         = reading_time(page.body_markup)
         read
