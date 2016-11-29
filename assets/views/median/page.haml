@@ -1,4 +1,4 @@
-= haml :header, layout: false
+= render :header, layout: false
 - if @page.intro_image
   %figure.intro
     %h1= @page.heading
@@ -18,14 +18,14 @@
         %img.avatar{src: author_avatar}
       %h2= author_full_name
       = author_biography
-  = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
+  = render :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 
   - if @page.articles.empty?
     - if @page.filename =~ %r{/pages/index\.md}
       %section.articles= article_summaries(latest_articles)
   - else
     %section.articles
-      = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
+      = render :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
   - if ENV["FACEBOOK_APP_ID"]
     .fb-comments(data-width="100%" data-numposts="5" data-colorscheme="light")
-= haml :footer, layout: false
+= render :footer, layout: false

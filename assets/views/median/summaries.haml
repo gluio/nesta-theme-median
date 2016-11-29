@@ -14,4 +14,4 @@
               = generate_summary(page.body(self))
             - else
               = generate_summary(page.summary)
-          = haml :page_meta, :layout => false, :locals => { :page => page }
+          = render :page_meta, :layout => false, :locals => { :page => page }
