@@ -3,13 +3,13 @@
   %head
     %meta(charset="utf-8")
     %title= @title
-    = render :stylesheets, layout: false
-    = render :javascripts, layout: false
-    = render :fonts, layout: false
-    = render :default_head, layout: false
+    = haml :stylesheets, layout: false
+    = haml :javascripts, layout: false
+    = haml :fonts, layout: false
+    = haml :default_head, layout: false
     - if @page && @page.canonical_url
       %link{ rel:"canonical", href: @page.canonical_url }
   %body
     .container
       = yield
-    = render :footer_scripts, layout: false
+    = haml :footer_scripts, layout: false
