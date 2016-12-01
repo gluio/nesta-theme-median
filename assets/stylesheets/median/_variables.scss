@@ -51,7 +51,7 @@ $base-border-color: lighten($base-font-color, 75%);
 $base-border: 1px solid $base-border-color;
 
 // Containers
-$max-width: 100%;
+$max-width: 100% !default;
 
 // Screens
 $medium-screen-width: 600px;
