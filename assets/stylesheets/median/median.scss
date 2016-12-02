@@ -295,6 +295,19 @@ figure.intro {
     overflow: hidden;
     opacity: 0.8;
   }
+  figcaption {
+    position: absolute;
+    bottom: 5px;
+    color: #fff;
+    right: -10px;
+    font-size: 60%;
+    font-style: italic;
+    letter-spacing: 0;
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }
 
 footer.post-links {
