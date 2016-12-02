@@ -264,6 +264,15 @@ mark {
       }
     }
   }
+  figure {
+    margin: 0;
+    padding: 0;
+    figcaption {
+      font-style: italic;
+      font-size: 60%;
+      color: transparentize($base-font-color, 0.6);
+    }
+  }
 }
 
 figure.intro {
