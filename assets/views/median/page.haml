@@ -24,8 +24,8 @@
   = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 
   - if @page.articles.empty?
-    - if @page.filename =~ %r{/pages/index\.md}
-      %section.articles= article_summaries(latest_articles)
+    //- if @page.filename =~ %r{/pages/index\.md}
+    //  %section.articles= article_summaries(latest_articles)
   - else
     %section.articles
       = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
